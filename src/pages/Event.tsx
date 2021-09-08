@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 
-const Calendar: FC = () => {
+const Event: FC = () => {
     return (
         <div>
-            Calendar
+            Event
         </div>
     );
 };
 
-export default Calendar;
+export default Event;
