@@ -1,5 +1,9 @@
 import auth from  './auth'
+import event from  './event'
 
-export default {
-    auth
+const allReducers = {
+    auth,
+    event
 }
+
+export default allReducers

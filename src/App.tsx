@@ -15,15 +15,16 @@ const App: FC = () => {
             setUser({username: localStorage.getItem('username'), password: ''} as IUser)
             setIsAuth(true)
         }
-    }, [])
+    }, [setUser, setIsAuth])
 
     return (
         <Layout>
             <Navbar/>
 
-            <Layout.Content>
+            <Layout.Content style={{backgroundColor: "#fff", padding: "2vw 0"}}>
                 <AppRouter/>
             </Layout.Content>
+
             <Layout.Footer>
                 <Row justify="center">
                     {moment().format('YYYY')}

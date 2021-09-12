@@ -1,8 +1,6 @@
 import React, {FC, useState} from 'react';
 import {Alert, Button, Form, Input} from "antd";
 import {rules} from "../utils/rules";
-import {AuthActionCreators} from "../store/reducers/auth/action-creators";
-import {useDispatch} from "react-redux";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useActions} from "../hooks/useActions";
 
@@ -14,14 +12,11 @@ const LoginForm: FC = () => {
 
     const {login} = useActions()
 
-
-    const submit = () => {
-        login(username, password)
-    };
+    const submit = () => login(username, password)
 
     return (
         <Form
-            name="basic"
+            name="login"
             onFinish={submit}
             autoComplete="off"
         >
